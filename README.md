@@ -40,16 +40,72 @@ Borrow out = A'Bin + A'B + BBin
 
 **Procedure**
 
-Write the detailed procedure here
+Write the detailed procedure here:
+
+1.Open the quartus prime software
+
+2.Mention th code in new file and compile, select tools- Netlist viewers-RTL viewver.
+
+3.Open new file and select world program UWF for waveform.
 
 **Program:**
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
+Developed by:Shivaani.R
+
+RegisterNumber:24007075
+
+full adder
+
+module fa(a,b,cin,sum,carry);
+
+input a,b,cin;
+
+output sum,carry;
+
+assign sum=( (a ^ b)^cin);
+
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+
+endmodule
+
+full subtractor
+
+module fs(a,b,bin,difference,borrow);
+
+input a,b,bin;
+
+output difference,borrow;
+
+assign difference= ( (a ^ b)^bin);
+
+assign borrow= ( ( ~a & b) | ( bin & ( ~ (a ^ b ))));
+
+endmodule
+
 **RTL Schematic**
 
+FULL ADDER
+
+![image](https://github.com/user-attachments/assets/99179b0b-f062-4a10-b461-73a26ace08bf)
+
+FULL SUBTRACTOR
+
+![image](https://github.com/user-attachments/assets/b23f3230-8d96-45ca-b2df-cd82fc0ea6d0)
+
+
 **Output Timing Waveform**
+
+FULL ADDER
+
+![image](https://github.com/user-attachments/assets/145753e2-f0a0-468f-a004-dcf8f731e740)
+
+FULL SUBTRACTOR
+
+![image](https://github.com/user-attachments/assets/5a175c83-c736-401e-a9a8-886750674fc5)
+
 
 **Result:**
 
